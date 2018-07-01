@@ -328,7 +328,7 @@ there.
 
 
 /* Larger than mobile */
-@media (max-width: 320px) {
+@media (min-width: 320px) {
   body {
     border-right: 15px solid #000;
     border-left: 15px solid #000;
@@ -351,7 +351,8 @@ there.
     text-align: left;
   }
   h2 { font-size: 2em; }
-  h3 { font-size: 1.5em; }
+  h3 { font-size: 1.125em; }
+  p { font-size: 1em; }
   pre, article, blockquote, dl, figure, table, p, ul, ol, form {
     margin-bottom: 1.125em;
   }
