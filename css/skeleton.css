@@ -167,7 +167,7 @@ body {
 .tags {
   font-family: 'PitchWebMed';
   text-transform: uppercase;
-  line-height: 2.2em;
+  line-height: 2.1em;
 }
 .tag--history {
   color: #012EEC;
@@ -184,7 +184,7 @@ h1, h2, h3, h4, h5, h6, a {
   margin-top: 0;
   font-weight: 300; }
 h1 { font-size: 1.25em; line-height: 1.2;}
-h2 { font-size: 2.5em; line-height: 1.25; text-transform: uppercase;}
+h2 { font-size: 3em; line-height: 1.25; text-transform: uppercase;}
 h3 { font-size: 1.8em; line-height: 1.125;}
 h4 { font-size: 2.4em; line-height: 1.35;}
 h5 { font-size: 1.8em; line-height: 1.5;}
@@ -270,12 +270,12 @@ td:last-child {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 .button {
-  margin-bottom: 1rem; }
+  margin-bottom: 1em; }
 input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5em; }
 pre,
 article,
 blockquote,
@@ -286,7 +286,7 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 2.5em; }
 
 
 /* Utilities
@@ -304,15 +304,6 @@ form {
 .u-center-align {
   text-align: center;
 }
-
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
-  border-width: 0;
-  border-top: 1px solid #E1E1E1; }
-
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -337,7 +328,7 @@ there.
 
 
 /* Larger than mobile */
-@media (min-width: 320px) {
+@media (max-width: 320px) {
   body {
     border-right: 15px solid #000;
     border-left: 15px solid #000;
@@ -362,15 +353,24 @@ there.
   h2 { font-size: 2em; }
   h3 { font-size: 1.5em; }
   pre, article, blockquote, dl, figure, table, p, ul, ol, form {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.125em;
   }
+  .tags { line-height: 2.1em; }
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+  .tags {
+    line-height: 2.1em;
+  }
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+  pre, article, blockquote, dl, figure, table, p, ul, ol, form {
+    margin-bottom: 2.5em;
+  }
+}
 
 /* Larger than desktop */
 @media (min-width: 1000px) {}
