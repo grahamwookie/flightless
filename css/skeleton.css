@@ -144,16 +144,16 @@ body {
 }
 .head-container {
   background-color: #000;
-  margin-bottom: 3rem;
+  margin-bottom: 3em;
 }
 .name-head {
-  padding: 1.125rem 0;
+  padding: 1.125em 0;
   color: #fff;
   line-height: 1.6;
 }
 .name-head a {
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.125em;
 }
 .name-head li {
   margin-bottom: 0;
@@ -162,12 +162,12 @@ body {
   margin-bottom: 0;
 }
 .name-head--social li:first-child {
-  padding-right: 0.875rem;
+  padding-right: 0.875em;
 }
 .tags {
   font-family: 'PitchWebMed';
   text-transform: uppercase;
-  line-height: 2.8rem;
+  line-height: 2.2em;
 }
 .tag--history {
   color: #012EEC;
@@ -183,26 +183,20 @@ h1, h2, h3, h4, h5, h6, a {
   font-family: 'PitchWebMed', Helvetica, Arial, sans-serif;
   margin-top: 0;
   font-weight: 300; }
-h1 { font-size: 1.25rem; line-height: 1.2;}
-h2 { font-size: 4rem; line-height: 1.25; text-transform: uppercase;}
-h3 { font-size: 2.0rem; line-height: 1.125;}
-h4 { font-size: 2.4rem; line-height: 1.35;}
-h5 { font-size: 1.8rem; line-height: 1.5;}
-h6 { font-size: 1.5rem; line-height: 1.6;}
+h1 { font-size: 1.25em; line-height: 1.2;}
+h2 { font-size: 2.5em; line-height: 1.25; text-transform: uppercase;}
+h3 { font-size: 1.8em; line-height: 1.125;}
+h4 { font-size: 2.4em; line-height: 1.35;}
+h5 { font-size: 1.8em; line-height: 1.5;}
+h6 { font-size: 1.5em; line-height: 1.6;}
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 1.25rem; }
-  h2 { font-size: 3.6rem; }
-  h3 { font-size: 2.0rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
-  h6 { font-size: 1.5rem; }
 }
 
 p {
   margin-top: 0;
-  font-size: 1.125rem;
+  font-size: 1.125em;
 }
 
 
@@ -343,7 +337,34 @@ there.
 
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 320px) {
+  body {
+    border-right: 15px solid #000;
+    border-left: 15px solid #000;
+  }
+  .container {
+    padding 0 15px;
+  }
+  .name-head {
+    padding: 0.5em 0;
+    text-align: center;
+  }
+  .name-head a {
+    font-size: 1em;
+    line-height: 2em;
+  }
+  .name-head .u-pull-right {
+    float: none;
+  }
+  .u-center-align {
+    text-align: left;
+  }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.5em; }
+  pre, article, blockquote, dl, figure, table, p, ul, ol, form {
+    margin-bottom: 1.2rem;
+  }
+}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {}
