@@ -20,6 +20,7 @@
 - Grid
 - Base Styles
 - Typography
+- Colour
 - Links
 - Buttons
 - Forms
@@ -132,10 +133,11 @@
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
-  font-size: 16px; }
+  height: 100%;
+}
 body {
-  font-size: 16px; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
+  font-size: 19px; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 28px;
   font-weight: 400;
   font-family: 'PT Sans', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
@@ -164,16 +166,28 @@ body {
 .name-head--social li:first-child {
   padding-right: 0.875em;
 }
+section {
+  margin-top: 3em;
+}
 .tags {
   font-family: 'PitchWebMed';
   text-transform: uppercase;
   line-height: 2.1em;
+}
+@media (min-width: 320px) {
+  .tags {
+    line-height: 21px;
+    font-size: 0.737em;
+  }
 }
 .tag--history {
   color: #012EEC;
 }
 .tag--design {
   color: #EE6920;
+}
+figure img {
+  width: 100%;
 }
 
 /* Typography
@@ -183,22 +197,44 @@ h1, h2, h3, h4, h5, h6, a {
   font-family: 'PitchWebMed', Helvetica, Arial, sans-serif;
   margin-top: 0;
   font-weight: 300; }
-h1 { font-size: 1.25em; line-height: 1.2;}
-h2 { font-size: 3em; line-height: 1.25; text-transform: uppercase;}
-h3 { font-size: 1.8em; line-height: 1.125;}
+h1 { font-size: 2.750em; line-height: 2.750em;}
+h2 { font-size: 1.684em; line-height: 36px;}
+h3 { font-size: 1.3em; line-height: 28px;}
 h4 { font-size: 2.4em; line-height: 1.35;}
-h5 { font-size: 1.8em; line-height: 1.5;}
-h6 { font-size: 1.5em; line-height: 1.6;}
-
-/* Larger than phablet */
-@media (min-width: 550px) {
-}
 
 p {
-  margin-top: 0;
-  font-size: 1.125em;
+  font-family: 'Noto Serif', serif;
+}
+@media (min-width: 320px) {
+  p {
+    font-size: 0.842em;
+    line-height: 24px;
+  }
+}
+@media (min-width: 550px) {
+  p {
+    font-size: 1em;
+    line-height: 28px;
+  }
+}
+.p--introduction {
+  font-size: 1.3em; line-height: 36px;
+}
+@media (min-width: 320px) {
+  .p--introduction {
+    font-size: 1em; line-height: 28px;
+  }
+}
+.p--footnote {
+  font-style: italic;
+}
+@media (min-width: 320px) {
+  h2 { font-size: 1.474em; line-height: 28px;}
 }
 
+
+/* Colour
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -227,10 +263,10 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
+  margin: 24px 0 1.5rem 3rem;
   font-size: 90%; }
 li {
-  margin-bottom: 1rem;
+  margin-top: 24px;
   display: inline-block;
 }
 
@@ -286,7 +322,11 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5em; }
+  margin-top: 24px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
 
 
 /* Utilities
@@ -301,8 +341,15 @@ form {
   float: right; }
 .u-pull-left {
   float: left; }
-.u-center-align {
-  text-align: center;
+
+@media (min-width: 320px) {
+  .u-center-align {
+    text-align: left;
+}
+@media (min-width: 550px) {
+  .u-center-align {
+    text-align: center;
+  }
 }
 
 /* Clearing
@@ -347,30 +394,19 @@ there.
   .name-head .u-pull-right {
     float: none;
   }
-  .u-center-align {
-    text-align: left;
-  }
-  h2 { font-size: 2em; }
-  h3 { font-size: 1.125em; }
-  p { font-size: 1em; }
   pre, article, blockquote, dl, figure, table, p, ul, ol, form {
-    margin-bottom: 1.125em;
+    margin-top: 24px;
+    margin-bottom: 0;
   }
-  .tags { line-height: 2.1em; }
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  .tags {
-    line-height: 2.1em;
-  }
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-  pre, article, blockquote, dl, figure, table, p, ul, ol, form {
-    margin-bottom: 2.5em;
-  }
+
 }
 
 /* Larger than desktop */
