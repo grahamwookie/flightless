@@ -167,7 +167,7 @@ body {
   padding-right: 0.875em;
 }
 section {
-  margin-top: 3em;
+  padding-top: 2em;
 }
 .tags {
   font-family: 'PitchWebMed';
@@ -188,6 +188,9 @@ section {
 }
 figure img {
   width: 100%;
+}
+.section-introduction {
+  color: #fff;
 }
 
 /* Typography
@@ -235,7 +238,12 @@ p {
 
 /* Colour
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+.lite-grey {
+  background-color: #F4F6F7;
+}
+.dark-grey {
+  background-color: #1A1E23;
+}
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
@@ -326,6 +334,9 @@ form {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
+}
+figure {
+  display: grid;
 }
 
 
