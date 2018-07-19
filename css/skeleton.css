@@ -169,6 +169,9 @@ body {
 section {
   padding-top: 2em;
 }
+section:first-child {
+  padding-top: 0;
+}
 .tags {
   font-family: 'PitchWebMed';
   text-transform: uppercase;
@@ -189,10 +192,41 @@ section {
 figure img {
   width: 100%;
 }
-.section-introduction {
-  color: #fff;
+.photo-cluster figure {
+  margin-top: 0;
+  display: inline-block;
 }
-
+.photo-cluster figcaption {
+  color:#6D6D6D;
+}
+@media (min-width: 320px) {
+  .photo-cluster figure {
+    margin-bottom: 12px;
+  }
+  .photo-cluster__a {
+    width: 100%;
+    float: none;
+  }
+  .photo-cluster__b {
+    width: 100%;
+    float: none;
+  }
+  .photo-cluster figcaption {
+    padding-top: 0;
+  }
+}
+@media (min-width: 550px) {
+  .photo-cluster__b {
+    width: 540px;
+    height: 380px;
+  }
+  .photo-cluster figure {
+    margin-bottom: 48px;
+  }
+  .photo-cluster figcaption {
+    padding-top: 4px;
+  }
+}
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -208,6 +242,10 @@ h4 { font-size: 2.4em; line-height: 1.35;}
 p {
   font-family: 'Noto Serif', serif;
 }
+figcaption {
+  font-size: 0.737em;
+  line-height: 21px;
+}
 @media (min-width: 320px) {
   p {
     font-size: 0.842em;
@@ -217,7 +255,7 @@ p {
 @media (min-width: 550px) {
   p {
     font-size: 1em;
-    line-height: 28px;
+    line-height: 32px;
   }
 }
 .p--introduction {
@@ -234,9 +272,22 @@ p {
 @media (min-width: 320px) {
   h2 { font-size: 1.474em; line-height: 28px;}
 }
+.article-statement {
+  background-image: url("../images/t1d-open-state-img.jpg");
+  height: 574px;
+  position: relative;
+}
+.article-statement--title {
+  color: #fff;
+  font-size: 3.1em;
+  line-height: 58px;
+  position: absolute;
+  top: 265px;
+  left: 20px;
+}
 
 
-/* Colour
+/* Colours
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .lite-grey {
   background-color: #F4F6F7;
