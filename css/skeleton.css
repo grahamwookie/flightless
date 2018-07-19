@@ -216,15 +216,29 @@ figure img {
   }
 }
 @media (min-width: 550px) {
+  .photo-cluster__a {
+    width: 185px;
+  }
   .photo-cluster__b {
-    width: 540px;
-    height: 380px;
+    width: 252px;
   }
   .photo-cluster figure {
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
   .photo-cluster figcaption {
     padding-top: 4px;
+  }
+}
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .photo-cluster__a {
+    width: 185px;
+  }
+  .photo-cluster__b {
+    width: 252px;
+  }
+  .photo-cluster figure {
+    margin-bottom: 48px;
   }
 }
 /* Typography
@@ -413,6 +427,7 @@ figure {
     text-align: center;
   }
 }
+
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
