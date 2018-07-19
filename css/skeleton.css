@@ -217,13 +217,13 @@ figure img {
 }
 @media (min-width: 550px) {
   .photo-cluster__a {
-    width: 185px;
+    width: 100%;
   }
   .photo-cluster__b {
-    width: 252px;
+    width: 100%;
   }
   .photo-cluster figure {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
   .photo-cluster figcaption {
     padding-top: 4px;
@@ -232,13 +232,10 @@ figure img {
 /* Larger than tablet */
 @media (min-width: 750px) {
   .photo-cluster__a {
-    width: 185px;
+    width: 380px;
   }
   .photo-cluster__b {
-    width: 252px;
-  }
-  .photo-cluster figure {
-    margin-bottom: 48px;
+    width: 540px;
   }
 }
 /* Typography
