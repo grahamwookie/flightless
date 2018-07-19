@@ -63,9 +63,9 @@
 @media (min-width: 550px) {
   .container {
     width: 80%; }
-  .container :first-child {
+  /*.container :first-child {
     margin-top: 0;
-  }
+  }*/
   .column,
   .columns {
     margin-left: 4%; }
@@ -138,8 +138,6 @@ html {
 body {
   font-size: 19px; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 28px;
-  font-weight: 400;
-  font-family: 'PT Sans', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
   border-right: 30px solid #000;
   border-left: 30px solid #000;
@@ -149,6 +147,7 @@ body {
   margin-bottom: 3em;
 }
 .name-head {
+  font-family: 'PitchWebMed', Helvetica, Arial, sans-serif;
   padding: 1.125em 0;
   color: #fff;
   line-height: 1.6;
@@ -157,8 +156,13 @@ body {
   color: #fff;
   font-size: 1.125em;
 }
+.name-head ul {
+  margin-top: 0;
+}
 .name-head li {
   margin-bottom: 0;
+  margin-top: 0;
+  display: inline-block;
 }
 .name-head--social {
   margin-bottom: 0;
@@ -173,7 +177,7 @@ section:first-child {
   padding-top: 0;
 }
 .tags {
-  font-family: 'PitchWebMed';
+  font-family: 'PitchWebMed', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 2.1em;
 }
@@ -196,10 +200,40 @@ figure img {
   margin-top: 0;
   display: inline-block;
 }
-.photo-cluster figcaption {
+figcaption, figcaption a {
   color:#6D6D6D;
+  border: 0;
+}
+.article-credits {
+  color: #7a7a7a;
+  font-size: 0.737em;
+  font-family: 'PitchWebMed', Helvetica, Arial, sans-serif;
+}
+.article-statement {
+  background-image: url("../images/t1d-open-state-img.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+}
+.article-statement--title {
+  font-family: 'PitchWebMed', Helvetica, Arial, sans-serif;
+  color: #fff;
+  position: absolute;
+  padding-right: 48px;
 }
 @media (min-width: 320px) {
+  .article-credits li {
+    margin-top: 12px;
+    margin-right: 0;
+    background-color: #eaeaea;
+    padding: 0 8px;
+    line-height: 18px;
+  }
+  .article-statement {
+    background-image: url("../images/t1d-open-state-img.jpg");
+    background-size: 400px, cover;
+    background-position: -30px 0px;
+    height: 251px;
+  }
   .photo-cluster figure {
     margin-bottom: 12px;
   }
@@ -211,46 +245,77 @@ figure img {
     width: 100%;
     float: none;
   }
-  .photo-cluster figcaption {
+  .article-statement--title {
+    font-size: 1.2em;
+    line-height: 28px;
+    top: 24px;
+    left: 12px;
+    margin-top: 0;
+  }
+  figcaption {
     padding-top: 0;
   }
 }
 @media (min-width: 550px) {
   .photo-cluster__a {
-    width: 100%;
+    width: 35%;
   }
   .photo-cluster__b {
-    width: 100%;
+    width: 60%;
   }
   .photo-cluster figure {
     margin-bottom: 18px;
   }
-  .photo-cluster figcaption {
-    padding-top: 4px;
+  .article-statement--title {
+    font-size: 2em;
+    line-height: 42px;
+    top: 265px;
+    left: 32px;
+  }
+  figcaption {
+    padding-top: 8px;
   }
 }
 /* Larger than tablet */
-@media (min-width: 750px) {
+
+@media (min-width: 1000px) {
   .photo-cluster__a {
+    width: 35%;
+  }
+  .photo-cluster__b {
+    width: 60%;
+  }
+  .article-credits {
+    text-align: center;
+  }
+  .article-credits li {
+    margin-right: 24px;
+    background-color: #eaeaea;
+    padding: 0 8px;
+  }
+  /*.photo-cluster__a {
     width: 380px;
   }
   .photo-cluster__b {
     width: 540px;
-  }
+  }*/
 }
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4 {
   font-family: 'PitchWebMed', Helvetica, Arial, sans-serif;
-  margin-top: 0;
+  margin-top: 56px;
+  margin-bottom: 0;
   font-weight: 300; }
-h1 { font-size: 2.750em; line-height: 2.750em;}
+h1 { font-size: 2.750em; line-height: 56px;}
 h2 { font-size: 1.684em; line-height: 36px;}
 h3 { font-size: 1.3em; line-height: 28px;}
 h4 { font-size: 2.4em; line-height: 1.35;}
 
 p {
+  font-size: 1.263em;
+  line-height: 36px;
   font-family: 'Noto Serif', serif;
 }
 figcaption {
@@ -258,19 +323,19 @@ figcaption {
   line-height: 21px;
 }
 @media (min-width: 320px) {
-  p {
+  /*p {
     font-size: 0.842em;
     line-height: 24px;
-  }
+  }*/
 }
 @media (min-width: 550px) {
-  p {
-    font-size: 1em;
-    line-height: 32px;
-  }
 }
 .p--introduction {
   font-size: 1.3em; line-height: 36px;
+}
+.article-heading--2 {
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
 }
 @media (min-width: 320px) {
   .p--introduction {
@@ -279,23 +344,12 @@ figcaption {
 }
 .p--footnote {
   font-style: italic;
+  color: #7a7a7a;
 }
 @media (min-width: 320px) {
-  h2 { font-size: 1.474em; line-height: 28px;}
+  h2 { font-size: 1.8em; line-height: 28px;}
 }
-.article-statement {
-  background-image: url("../images/t1d-open-state-img.jpg");
-  height: 574px;
-  position: relative;
-}
-.article-statement--title {
-  color: #fff;
-  font-size: 3.1em;
-  line-height: 58px;
-  position: absolute;
-  top: 265px;
-  left: 20px;
-}
+
 
 
 /* Colours
@@ -459,7 +513,6 @@ there.
   }
   .name-head {
     padding: 0.5em 0;
-    text-align: center;
   }
   .name-head a {
     font-size: 1em;
