@@ -260,17 +260,24 @@ figcaption, figcaption a {
   .photo-cluster__a {
     width: 35%;
   }
+  .article-statement {
+    background-image: url("../images/t1d-open-state-img.jpg");
+    background-size: 100%, cover;
+    background-position: -30px 0px;
+    height: 574px;
+  }
+  .article-statement--title {
+    font-size: 1.2em;
+    line-height: 28px;
+    top: 100px;
+    left: 24px;
+    margin-top: 0;
+  }
   .photo-cluster__b {
     width: 60%;
   }
   .photo-cluster figure {
     margin-bottom: 18px;
-  }
-  .article-statement--title {
-    font-size: 2em;
-    line-height: 42px;
-    top: 265px;
-    left: 32px;
   }
   figcaption {
     padding-top: 8px;
@@ -293,6 +300,12 @@ figcaption, figcaption a {
     background-color: #eaeaea;
     padding: 0 8px;
   }
+  .article-statement--title {
+    font-size: 2em;
+    line-height: 48px;
+    top: 200px;
+    left: 32px;
+  }
   /*.photo-cluster__a {
     width: 380px;
   }
@@ -307,13 +320,13 @@ h1, h2, h3, h4 {
   font-family: 'PitchWebMed', Helvetica, Arial, sans-serif;
   margin-top: 56px;
   margin-bottom: 0;
-  font-weight: 300; }
+  font-weight: 300;
+  width: 100%;
+}
 h1 { font-size: 2.750em; line-height: 56px;}
-h2 { font-size: 1.684em; line-height: 36px;}
-h3 { font-size: 1.3em; line-height: 28px;}
 h4 { font-size: 2.4em; line-height: 1.35;}
 
-p {
+p, li {
   font-size: 1.263em;
   line-height: 36px;
   font-family: 'Noto Serif', serif;
@@ -323,31 +336,35 @@ figcaption {
   line-height: 21px;
 }
 @media (min-width: 320px) {
-  /*p {
-    font-size: 0.842em;
-    line-height: 24px;
-  }*/
-}
-@media (min-width: 550px) {
-}
-.p--introduction {
-  font-size: 1.3em; line-height: 36px;
-}
-.article-heading--2 {
-  font-family: 'Noto Serif', serif;
-  font-weight: 700;
-}
-@media (min-width: 320px) {
+  h2 { font-size: 1.8em; line-height: 28px;}
   .p--introduction {
     font-size: 1em; line-height: 28px;
   }
 }
+@media (min-width: 550px) {
+  h2 { font-size: 2.3em;
+    line-height: 28px;
+    margin-top: 72px;
+  }
+  h3 {
+    font-size: 1.684em;
+    line-height: 28px;
+  }
+}
+.p--introduction {
+  font-size: 1.3em; line-height: 36px;
+}
+.article-heading--2, .article-heading--3 {
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+}
+.article-heading--3 {
+  font-style: italic;
+  font-weight: 400;
+}
 .p--footnote {
   font-style: italic;
   color: #7a7a7a;
-}
-@media (min-width: 320px) {
-  h2 { font-size: 1.8em; line-height: 28px;}
 }
 
 
@@ -392,6 +409,7 @@ ol ul {
 li {
   margin-top: 24px;
   display: inline-block;
+  list-style: georgian outside;
 }
 
 
@@ -446,7 +464,7 @@ p,
 ul,
 ol,
 form {
-  margin-top: 24px;
+  margin-top: 36px;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -529,6 +547,9 @@ there.
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+  pre, article, blockquote, dl, figure, table, p, ul, ol, form {
+    margin-top: 36px;
+  }
 }
 
 /* Larger than tablet */
